@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página bonita :3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f3ff;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #8a56ac;
+            text-align: center;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+
+        h3 {
+            background-color: #8a56ac;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .no-click {
+            background-color: #8a56ac;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #8a56ac;
+            padding-left: 10px;
+            margin-left: 20px;
+            color: #666;
+        }
+
+        img {
+            max-width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Práctica HTML Informática 2023</h1>
+
+    <h3>Los meses de primavera</h3>
+    <ul>
+        <li>.  Abril</li>
+        <li>.  Mayo</li>
+        <li>.  Junio</li>
+    </ul>
+    <br>
+
+    <h3>Los meses de verano</h3>
+    <ol>
+        <li> Julio</li>
+        <li> Agosto</li>
+        <li> Septiembre</li>
+    </ol>
+    <br>
+
+    <h3>Los meses del año</h3>
+    <ul>
+    <br>
+
+    <h3 class="no-click">Los meses de primavera</h3> 
+    <ul>
+        <li>1.  Abril</li>
+        <li>2.  Mayo</li>
+        <li>3.  Junio</li>
+    </ul>
+    <br>
+
+    <h3 class="no-click">Los meses de verano</h3>
+    <ul>
+        <li>1.  Julio</li>
+        <li>2.  Agosto</li>
+        <li>3.  Septiembre</li>
+    </ul>
+    </ul>
+    <br>
+
+    <h3>Los refranes de los meses</h3>
+    <blockquote>
+        <p>Marzo:
+                 El sol de Marzo da con el mazo</p>
+        <p>Abril: 
+                 En Abril, aguas mil</p>
+        <p>Mayo: 
+                 Hasta el 40 de mayo no te quites el sayo</p>
+    </blockquote>
+
+    <h4>Verano</h2>
+    <a href="https://es.wikipedia.org/wiki/Verano" target="_blank">
+        <img src="https://es.wikipedia.org/wiki/Archivo:Field_Hamois_Belgium_Luc_Viatour.jpg" alt="Imagen de Verano">
+    </a>
+
+    <h4>Primavera</h2>
+    <a href="https://es.wikipedia.org/wiki/Primavera" target="_blank">
+        <img src="https://es.wikipedia.org/wiki/Archivo:Fr%C3%BChling_bl%C3%BChender_Kirschenbaum.jpg" alt="Imagen de Primavera">
+    </a>
+
+    <script>
+        function changeSaturation(heading) {
+            heading.style.filter = 'saturate(50%)';
+            setTimeout(() => {
+                heading.style.filter = 'saturate(100%)';
+            }, 2000)
+        }
+
+        const headings = document.querySelectorAll('h2');
+        headings.forEach(heading => {
+            heading.addEventListener('click', () => {
+                heading.style.backgroundColor = '#8a56ac';
+                changeSaturation(heading);
+            });
+        });
+    </script>
+</body>
+</html>
